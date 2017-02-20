@@ -57,6 +57,8 @@ end
 
 group :production do
   gem 'pg', '0.18.4'
+  # For Google Analytics to work. $ RAILS_ENV=production rake assets:precompile git add -A, commit -m "assets compiled for Heroku", push heroku
+  #gem 'rails_12factor', '~> 0.0.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
