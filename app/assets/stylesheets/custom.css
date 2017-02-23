@@ -11,3 +11,7 @@
     width: 4rem;
     height: 4rem;
 }
+
+.header-navigation .navbar-nav{
+    margin-left: 2rem;
+}
