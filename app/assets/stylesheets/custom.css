@@ -4,5 +4,10 @@
 
 .page-header-nav-pills{
     width: 100%;
-    margin-top: 0.55rem;
+    margin-top: 1.5rem;
+}
+
+.logo-link img{
+    width: 4rem;
+    height: 4rem;
 }
