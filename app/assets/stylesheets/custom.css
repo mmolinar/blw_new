@@ -10,8 +10,8 @@
 }
 
 .logo-link img{
-    width: 4rem;
-    height: 4rem;
+    width: 4.5rem;
+    height: 4.5rem;
 }
 
 .header-navigation .navbar-nav{
@@ -58,27 +58,27 @@
     width: 100%;
 }
 
-.articles-1 .article-list{
+.article-list{
         list-style: none;
         padding-left: 0;
     }
 
 @media (min-width: 992px) {
-    .articles-1 .article-list{
+.article-list{
         border-right: 1px solid #e0e0e0;
     }
 }
 
-.articles-1 .article-list li{
+.article-list li{
     margin-bottom: 1rem;
     margin-right: 0;
 }
 
-.articles-1 .article-text{
+.article-text{
     padding: 1rem;
 }
 
-.articles-1 .article-text .category-title a{
+.article-text .category-title a{
     font-size: 0.82rem;
     color: #7cc347;
     text-transform: uppercase;
@@ -93,5 +93,22 @@
 }
 
 .videos{
-    padding: 1rem;
+    padding: 0.5rem;
 }
+
+/* Recipe */
+.recipe-list{
+        list-style: none;
+        padding: 0.5rem;
+    }
+    
+#recipe-content{
+    margin-top: 1rem;
+}
+
+/* Articles 6 */
+.articles-6-list{
+        list-style: none;
+        padding: 0.5rem;
+        margin-bottom: -1rem;
+    }

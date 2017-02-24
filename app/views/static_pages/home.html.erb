@@ -30,64 +30,41 @@
     <!------------ END CAROUSEL ------------>
     <!------------ PAGE CONTENT ------------>
     <section class="home-content">
-      <section id="2-column-content">
+      <section id="articles-2-content">
         <div class="row">
           <!------------ ARTICLES ------------>
           <div class="col-md-8">
             <div class="articles-1">
               <ul class="article-list">
-                <%= render 'layouts/2col-articles' %>
+                <%= render 'layouts/col-articles' %>
               </ul>
             </div>
           </div>
           <!------------ END ARTICLES ------------>
           <!------------ VIDEOS ------------>
           <div class="col-md-4">
-            <div class="row">
-              <div class="col-12">
-                <div class="videos">
-                  <div class="embed-responsive embed-responsive-4by3">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NHtxfcKXl6g"></iframe>
-                  </div>
-                  <p class="h6 text-muted"><small>BLW explicado en 1 minuto. No papillas ni comida 
-                  especial para bebé. Deja que tu bebé aprenda a gozar la comida y tu la hora de comer.</small></p>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <div class="videos">
-                  <div class="embed-responsive embed-responsive-4by3">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NHtxfcKXl6g"></iframe>
-                  </div>
-                  <p class="h6 text-muted"><small>BLW explicado en 1 minuto. No papillas ni comida 
-                  especial para bebé. Deja que tu bebé aprenda a gozar la comida y tu la hora de comer.</small></p>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <div class="videos">
-                  <div class="embed-responsive embed-responsive-4by3">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NHtxfcKXl6g"></iframe>
-                  </div>
-                  <p class="h6 text-muted"><small>BLW explicado en 1 minuto. No papillas ni comida 
-                  especial para bebé. Deja que tu bebé aprenda a gozar la comida y tu la hora de comer.</small></p>
-                </div>
-              </div>
-            </div>
+            <%= render 'layouts/col-videos'%>
           </div>
           <!------------ END VIDEOS ------------>
         </div>
         <!-- END ROW -->
       </section>
-      <!-- 2-COLUMN-CONTENT -->
+      <!-- RECIPES-CONTENT -->
       <section id="recipe-content">
-
+        <div class="row article-tumbnail-top">
+          <%= render 'layouts/col-recipes'%>
+        </div>
       </section>
+      <!-- END RECIPES-CONTENT -->
+      <!-- ARTICLES-CONTENT -->
       <section id="articles-content">
-
-      </section>
+        <div class="row">
+          <%= render 'layouts/col-articles-6'%>
+        </div>
+        <div class="row">
+          <%= render 'layouts/col-articles-6bis'%>
+        </div>
+      </section> <!-- ARTICLES-CONTENT -->
     </section>
     <!-- END HOME-CONENT -->
     <!------------ END PAGE CONTENT ------------>
