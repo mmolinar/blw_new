@@ -1,27 +1,120 @@
+<section class="blog-home">
+    <div class="container">
+        <section class="blog-main">
+            <div class="row">
+                <div class="col-md-8">
+                    <!-- BLOG PRIMARY -->
+                    <div id="blog-primary">
+                        <div class="blog-title">
+                            <h4>BLW en Espanol Blog</h4>
+                            <h3>Blog article Title</h3>
+                        </div>
+                        <div class="blog-content">
+                            <a href="#">
+                                <img class="d-block img-fluid" src="/assets/application/BLW logo">
+                            </a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, sit aut delectus. 
+                            Et, dolores impedit facere cum sint eveniet amet veniam deserunt quasi minus. 
+                            Eveniet, consectetur impedit molestiae quibusdam sunt.
+                            </p>
+                            <a class="btn btn-outline-primary" href="#" role="button">Link</a>
+                            <!-- Share buttons -->
+                        </div>
+                    </div>
+                    <!-- END BLOG PRIMARY -->
+                    <!-- BLOG ARTICLES -->
+                    <div class="blog-articles">
+                        <div class="row article-tumbnail-top">
+                            <%= render 'posts/blog-2-col'%>
+                        </div>
+                    </div>
+                    <!-- END BLOG ARTICLES -->
+                </div> <!-- col-md-8 -->
+                <!-- SIDEBAR -->
+                <div class="col-md-4">
+                    <div class="blog-about">
+                      <h3>ABOUT US</h3>
+                      <div class="about-content">
+                          <img class="d-block img-fluid" src="/assets/application/BLW logo">
+                          <p>Lorem ipsum dolor sitriores in quae veritatis deleniti 
+                          minima numquam autem fugiat mollitia impedit doloribus 
+                          nesciunt error officiis aperiam distinctio odio porro?</p>
+                      </div>
+                    </div>
+                    <div class="blog-popular">
+                       <h3>Posts you might like</h3>
+                       <div class="popular-content">
+                           <div class="popular-article">
+                                <div class="articles-1">
+                                  <ul class="article-list">
+                                    <%= render 'layouts/col-articles' %>
+                                  </ul>
+                                </div>
+                           </div>
+                       </div>
+                    </div>
+                    <div class="blog-categories">
+                        <h3>Categories</h3>
+                        <ul>
+                            <li>Toddlers</li>
+                            <p>Lorem ipsum dolor sit amet, an consequuntur del</p>
+                            <li>In the News</li>
+                            <p>Lorem ipsum dolor sit amet, an consequuntur del</p>
+                            <li>Parenting</li>
+                            <p>Lorem ipsum dolor sit amet, an consequuntur del</p>
+                            <li>Food</li>
+                            <p>Lorem ipsum dolor sit amet, an consequuntur del</p>
+                        </ul>
+                    </div>
+                    <div class="blog-dates">
+                        <h3>Serach by date</h3>
+                        <ul>
+                            <li>Enero</li>
+                            <p>Lorem ipsum dolor sit amet, an consequuntur del</p>
+                            <li>Febrero</li>
+                            <p>Lorem ipsum dolor sit amet, an consequuntur del</p>
+                            <li>Marzo</li>
+                            <p>Lorem ipsum dolor sit amet, an consequuntur del</p>
+                            <li>Abril</li>
+                            <p>Lorem ipsum dolor sit amet, an consequuntur del</p>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END SIDEBAR -->
+            </div> <!-- row -->
+        </section> <!-- blog-main -->
+    </div> <!-- container -->
+</section> <!-- blog-home -->
+
+
 <% @post.each do |post| %>
     <div>
-        <h2><%= link_to post.title, post%></h2>
-        <p><%= post.created_at.strftime("%d %B, %Y") %></p>
+        <h2>
+            <%= link_to post.title, post%>
+        </h2>
+        <p>
+            <%= post.created_at.strftime("%d %B, %Y") %>
+        </p>
     </div>
-<% end %>
+    <% end %>
 
-<section id="posts">
-    <div class="posts-content">
-        <div class="header">
-            <p>All Posts</p>
-            
-            <div>
-                <button class="button"><%= link_to "New Post", new_post_path%></button>
-                <button class="button">Log out</button>
+        <section id="posts">
+            <div class="posts-content">
+                <div class="header">
+                    <p>All Posts</p>
+
+                    <div>
+                        <button class="button"><%= link_to "New Post", new_post_path%></button>
+                        <button class="button">Log out</button>
+                    </div>
+                </div>
+
+                <% flash.each do |name, msg| %>
+                    <div class="alert alert-success" role="alert">
+                        <strong>Well done!</strong> You successfully read this important alert message.
+                    </div>
+                    <% end %>
+
+                        <%= yield %>
             </div>
-        </div>
-        
-        <% flash.each do |name, msg| %>
-            <div class="alert alert-success" role="alert">
-              <strong>Well done!</strong> You successfully read this important alert message.
-            </div>
-        <% end %>
-        
-        <%= yield %>
-    </div>
-</section>
+        </section>
