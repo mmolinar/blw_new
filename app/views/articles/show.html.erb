@@ -1,0 +1,15 @@
+<h1 class="title">
+    <%= @article.title %>
+</h1>
+
+<p>
+    <%= @article.created_at.strftime("%d %B, %Y") %>
+    | <%= link_to 'Edit', edit_article_path(@article) %>
+    | <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %>
+</p>
+
+<p>
+    <%= @article.description %>
+</p>
+
+<a href="<%= @article.link %>" target="_blank">Leer mas</a>

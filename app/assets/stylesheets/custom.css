@@ -115,3 +115,48 @@
     
     /* QUITA UN POCO DE ESPACIO ENTRE CATEGORY TITLE Y THUMBNAIL DE RECIPES Y 
     ARTICLES 6 MAS DE ARTICLES 6*/
+    
+/* CUSTOMIZE BLOG HOME
+-------------------------------------------------- */
+.blog-home {
+    margin-top: 3rem;
+}
+
+.blog-home .right {
+    margin-top: 1.8rem;
+}
+
+.right-titles{
+    text-transform: uppercase;
+}
+
+#blog-primary, .blog-about, .blog-popular, .blog-categories, .blog-dates{
+    margin-bottom: 3rem;
+}
+
+.blog-title h4{
+    font-size: 0.82rem;
+    color: #7cc347;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.popular-article .article-title{
+    font-size: 1.3rem;
+}
+
+.popular-article .article-text{
+    padding: 0rem;
+}
+
+.popular-article .article-text .category-title{
+    margin-top: -0.9rem;
+}
+
+@media (min-width: 992px) {
+.article-list{
+        border-right: none;
+    }
+}

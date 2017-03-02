@@ -1,0 +1,41 @@
+<!------- ARTICLES ------->
+<div class="blog-popular">
+    <h3 class="right-titles">Posts you might like</h3>
+    <div class="popular-content">
+        <div class="popular-article">
+            <div class="articles-1">
+                <ul class="article-list">
+                    <li>
+                        <!------------ ARTICLE ------------>
+                        <div class="row article-tumbnail-top">
+                            <div class="col-md-6 article-thumbnail">
+                                <!------- IMAGE ------->
+                                <a href="#"><img src="#" class="img-thumbnail float-left"></a>
+                            </div>
+                            <!------- END IMAGE ------->
+                            <% @article.each do |article| %>
+                            <div class="col-md-6 article-text">
+                                <!------- ARTICLE CONTENT ------->
+                                <h3 class="category-title">
+                                    <a href="#"></a>
+                                </h3>
+                                <a class="column-article-title" href="#">
+                                    <h3 class="article-title"><%= link_to article.title, article %></h3>
+                                </a>
+                                <div class="article-author">
+                                     <p>
+                                        <%= article.created_at.strftime("%d/%m/%y")%>
+                                    </p>
+                                </div>
+                            </div>
+                            <!------- END ARTICLE CONTENT------->
+                            <% end %>
+                        </div>
+                    </li>
+                    <!------------ END ARTICLE ------------>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!------- END ARTICLES ------->

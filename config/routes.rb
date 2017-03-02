@@ -1,18 +1,12 @@
 Rails.application.routes.draw do
   resources :posts
-  
+  resources :articles
   root 'static_pages#home'
-  
   get 'static_pages/home'
-
   get 'static_pages/about'
-
   get 'static_pages/videos'
-
   get 'static_pages/fotos'
-
   get 'static_pages/contacto'
-  
   get 'blog/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
