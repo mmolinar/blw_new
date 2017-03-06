@@ -22,6 +22,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'puma',         '3.4.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Paperclip gem to upload images
+gem "paperclip", "~> 5.0.0"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
