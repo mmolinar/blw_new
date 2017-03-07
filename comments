@@ -1,6 +1,5 @@
-Index repeats itself number of times @post is limited to in the blog controller
-How to feature the most recent article at top and the next 6 at the bottom?
 Add link to post model link:string (forgot to add when rails g
 link_to image; how to article.image or similar
 Make image fit into 16x9 in blog/index
 How to add the nav pills to the toggle button?
+How to make img-fluid resize to full width when screen smaller in Posts and Articles
