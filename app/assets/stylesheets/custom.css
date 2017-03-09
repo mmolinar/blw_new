@@ -70,7 +70,7 @@
 }
 
 .article-list li{
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     margin-right: 0;
 }
 
@@ -92,11 +92,16 @@
     font-weight: 700;
 }
 
+.title-where {
+    margin-bottom: 1rem;
+}
+
 .videos{
     padding: 0.5rem;
 }
 
-/* Recipe */
+/* CUSTOMIZE RECIPE HOME
+-------------------------------------------------- */
 .recipe-list{
         list-style: none;
         padding: 0.5rem;

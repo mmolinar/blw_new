@@ -1,9 +1,35 @@
+<section id="blog-posts-index">
+    <div class="main-content">
+        <section class="main-content container">
+          <header class="index-header">
+            <h1 class=index-page-title>
+                All Posts
+            </h1>
+          </header> 
+          <div class="">
+              
+          </div>
+        </section>
+        <aside class="">
+            
+        </aside>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
 <h1 class="title">
     <%= @post.title %>
 </h1>
 
 <p>
-    <%= image_tag @post.pic.url(:large), class: 'img-fluid' %>
+    <%= image_tag @post.pic.url(:large), class: 'img-thumbnail' %>
 </p>
 
 <p>

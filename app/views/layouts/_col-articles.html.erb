@@ -1,9 +1,10 @@
+<% @article.each do |article| %>
 <li>
     <!------------ 1ST ARTICLE ------------>
     <div class="row article-tumbnail-top">
         <div class="col-md-6 article-thumbnail">
             <!------- IMAGE ------->
-            <a href="#"><img src="/assets/application/BLW logo" class="img-thumbnail float-left"></a>
+            <a href="#"><%= image_tag article.pic.url(:medium), class: "img-thumbnail float-left" %></a>
         </div>
         <!------- END IMAGE ------->
         <div class="col-md-6 article-text">
@@ -12,8 +13,7 @@
                 <a href="#">1st article</a>
             </h3>
             <a class="column-article-title" href="#">
-                <h3 class="article-title">Alimentos ideales para empezar: Ricos en hierro, 
-                faciles de manipular</h3>
+                <h3 class="article-title"><%= link_to article.title, article%></h3>
             </a>
             <div class="article-author">
                 
@@ -22,52 +22,5 @@
         <!------- END ARTICLE ------->
     </div>
 </li>
+<% end %>
 <!------------ END 1ST ARTICLE ------------>
-<li>
-    <!------------ 2ND ARTICLE ------------>
-    <div class="row article-tumbnail-top">
-        <div class="col-md-6 article-thumbnail">
-            <!------- IMAGE ------->
-            <a href="#"><img src="/assets/application/BLW logo" class="img-thumbnail float-left"></a>
-        </div>
-        <!------- END IMAGE ------->
-        <div class="col-md-6 article-text">
-            <!------- ARTICLE ------->
-            <h3 class="category-title">
-                <a href="#">2ND ARTICLE</a>
-            </h3>
-            <a class="column-article-title" href="#">
-                <h3 class="article-title">Title</h3>
-            </a>
-            <div class="article-author">
-
-            </div>
-        </div>
-        <!------- END ARTICLE ------->
-    </div>
-</li>
-<!------------ END 2ND ARTICLE ------------>
-<li>
-    <!------------ 3RD ARTICLE ------------>
-    <div class="row article-tumbnail-top">
-        <div class="col-md-6 article-thumbnail">
-            <!------- IMAGE ------->
-            <a href="#"><img src="/assets/application/BLW logo" class="img-thumbnail float-left"></a>
-        </div>
-        <!------- END IMAGE ------->
-        <div class="col-md-6 article-text">
-            <!------- ARTICLE ------->
-            <h3 class="category-title">
-                <a href="#">3RD ARTICLE</a>
-            </h3>
-            <a class="column-article-title" href="#">
-                <h3 class="article-title">Title</h3>
-            </a>
-            <div class="article-author">
-
-            </div>
-        </div>
-        <!------- END ARTICLE ------->
-    </div>
-</li>
-<!------------ END 3RD ARTICLE ------------>
