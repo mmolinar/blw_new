@@ -1,10 +1,10 @@
-<% @article.each do |article| %>
+<% @posts.each do |post| %>
 <li>
     <!------------ 1ST ARTICLE ------------>
     <div class="row article-tumbnail-top">
         <div class="col-md-6 article-thumbnail">
             <!------- IMAGE ------->
-            <a href="#"><%= image_tag article.pic.url(:medium), class: "img-thumbnail float-left" %></a>
+            <a href="#"><%= image_tag post.pic.url(:medium), class: "img-thumbnail responsive" %></a>
         </div>
         <!------- END IMAGE ------->
         <div class="col-md-6 article-text">
@@ -13,8 +13,15 @@
                 <a href="#">1st article</a>
             </h3>
             <a class="column-article-title" href="#">
-                <h3 class="article-title"><%= link_to article.title, article%></h3>
+                <h3 class="article-title"><%= link_to post.title, post%></h3>
+                <p class="article-author"><small>
+                    <%= post.created_at.strftime("%d %B, %Y") %></small>
+                </p>
+                <p>
+                    <%= link_to post.body.truncate_words(35), post%>
+                </p>
             </a>
+            
             <div class="article-author">
                 
             </div>

@@ -1,8 +1,9 @@
-<% @article.each do |article| %>
+
     <section id="blog-posts-all">
         <div class="row">
             <div class="col-md-9">
                 <div class="row">
+                    <% @article.each do |article| %>
                     <div class="col-md-5">
                         <p>
                             <%= image_tag article.pic.url(:medium), class: "img-fluid" %>
@@ -20,13 +21,14 @@
                         </p>
                     </div>
                 </div>
+                <% end %>
             </div>
             <div class="col=md-3">
                
             </div>
         </div>
     </section>
-<% end %>
+
 
         <section id="articles">
             <div class="posts-content">

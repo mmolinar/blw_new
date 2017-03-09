@@ -1,3 +1,4 @@
+<% @article.each do |article| %>
 <div class="col-md-4">
     <div class="articles-6-list">
         <ul class="articles-6-list">
@@ -6,7 +7,7 @@
                 <div class="articles-6-article">
                     <div class="article-thumbnail">
                         <!------- IMAGE ------->
-                        <a href="#"><img src="/assets/application/BLW logo" class="img-thumbnail"></a>
+                        <a href="#"><%= image_tag article.pic.url(:medium), class: "img-thumbnail responsive" %></a>
                     </div>
                     <!------- END IMAGE ------->
                     <div class="article-text">
@@ -15,11 +16,14 @@
                             <a href="#">1st article</a>
                         </h3>
                         <a class="column-article-title" href="#">
-                            <h3 class="article-title">Alimentos ideales para empezar: Ricos en hierro, faciles de manipular</h3>
+                            <h3 class="article-title"><%= link_to article.title, article%></h3>
+                            <p class="article-author"><small>
+                            <%= article.created_at.strftime("%d %B, %Y") %></small>
+                            </p>
+                            <p>
+                                <%= link_to article.description.truncate_words(35), article%>
+                            </p>
                         </a>
-                        <div class="article-author">
-
-                        </div>
                     </div>
                     <!------- END ARTICLES-6 ------->
                 </div>
@@ -27,148 +31,4 @@
         </ul>
     </div>
 </div>
-<div class="col-md-4">
-    <div class="articles-6-list">
-        <ul class="articles-6-list">
-            <li>
-                <!------------ 2ND ARTICLES-6 ------------>
-                <div class="articles-6-article">
-                    <div class="article-thumbnail">
-                        <!------- IMAGE ------->
-                        <a href="#"><img src="/assets/application/BLW logo" class="img-thumbnail"></a>
-                    </div>
-                    <!------- END IMAGE ------->
-                    <div class="article-text">
-                        <!------- ARTICLE ------->
-                        <h3 class="category-title">
-                            <a href="#">2nd article</a>
-                        </h3>
-                        <a class="column-article-title" href="#">
-                            <h3 class="article-title">Alimentos ideales para empezar: Ricos en hierro, faciles de manipular</h3>
-                        </a>
-                        <div class="article-author">
-
-                        </div>
-                    </div>
-                    <!------- END ARTICLES-6 ------->
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="col-md-4">
-    <div class="articles-6-list">
-        <ul class="articles-6-list">
-            <li>
-                <!------------ 3RD ARTICLES-6 ------------>
-                <div class="articles-6-article">
-                    <div class="article-thumbnail">
-                        <!------- IMAGE ------->
-                        <a href="#"><img src="/assets/application/BLW logo" class="img-thumbnail"></a>
-                    </div>
-                    <!------- END IMAGE ------->
-                    <div class="article-text">
-                        <!------- ARTICLE ------->
-                        <h3 class="category-title">
-                            <a href="#">3rd article</a>
-                        </h3>
-                        <a class="column-article-title" href="#">
-                            <h3 class="article-title">Alimentos ideales para empezar: Ricos en hierro, faciles de manipular</h3>
-                        </a>
-                        <div class="article-author">
-
-                        </div>
-                    </div>
-                    <!------- END ARTICLES-6 ------->
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="col-md-4">
-    <div class="articles-6-list">
-        <ul class="articles-6-list">
-            <li>
-                <!------------ 4TH ARTICLES-6 ------------>
-                <div class="articles-6-article">
-                    <div class="article-thumbnail">
-                        <!------- IMAGE ------->
-                        <a href="#"><img src="/assets/application/BLW logo" class="img-thumbnail"></a>
-                    </div>
-                    <!------- END IMAGE ------->
-                    <div class="article-text">
-                        <!------- ARTICLE ------->
-                        <h3 class="category-title">
-                            <a href="#">1st article</a>
-                        </h3>
-                        <a class="column-article-title" href="#">
-                            <h3 class="article-title">Alimentos ideales para empezar: Ricos en hierro, faciles de manipular</h3>
-                        </a>
-                        <div class="article-author">
-
-                        </div>
-                    </div>
-                    <!------- END ARTICLES-6 ------->
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="col-md-4">
-    <div class="articles-6-list">
-        <ul class="articles-6-list">
-            <li>
-                <!------------ 5TH ARTICLES-6 ------------>
-                <div class="articles-6-article">
-                    <div class="article-thumbnail">
-                        <!------- IMAGE ------->
-                        <a href="#"><img src="/assets/application/BLW logo" class="img-thumbnail"></a>
-                    </div>
-                    <!------- END IMAGE ------->
-                    <div class="article-text">
-                        <!------- ARTICLE ------->
-                        <h3 class="category-title">
-                            <a href="#">5th article</a>
-                        </h3>
-                        <a class="column-article-title" href="#">
-                            <h3 class="article-title">Alimentos ideales para empezar: Ricos en hierro, faciles de manipular</h3>
-                        </a>
-                        <div class="article-author">
-
-                        </div>
-                    </div>
-                    <!------- END ARTICLES-6 ------->
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="col-md-4">
-    <div class="articles-6-list">
-        <ul class="articles-6-list">
-            <li>
-                <!------------ 6TH ARTICLES-6 ------------>
-                <div class="articles-6-article">
-                    <div class="article-thumbnail">
-                        <!------- IMAGE ------->
-                        <a href="#"><img src="/assets/application/BLW logo" class="img-thumbnail"></a>
-                    </div>
-                    <!------- END IMAGE ------->
-                    <div class="article-text">
-                        <!------- ARTICLE ------->
-                        <h3 class="category-title">
-                            <a href="#">6th article</a>
-                        </h3>
-                        <a class="column-article-title" href="#">
-                            <h3 class="article-title">Alimentos ideales para empezar: Ricos en hierro, faciles de manipular</h3>
-                        </a>
-                        <div class="article-author">
-
-                        </div>
-                    </div>
-                    <!------- END ARTICLES-6 ------->
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
+<% end %>
