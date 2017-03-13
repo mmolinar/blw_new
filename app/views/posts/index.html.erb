@@ -6,17 +6,17 @@
         <% end %>
             <%= yield %>
     <div class="main-content">
-        <div class="row">
-            <section class="section-content col-md-9">
-                <header class="index-header">
-                    <h1 class="index-page-title"> All posts</h1>
+        <header class="index-header">
+                    <h1 class="index-page-title d-flex justify-content-center"> All posts</h1>
                     <div class="top-buttons">
                         <button class="button"><%= link_to "New Post", new_post_path%></button>
                         <button class="button">Log out</button>
                     </div>
                 </header>
+        <div class="row">
+            <div class="section-content col-md-12 col-lg-9">
                 <% @post.each do |post| %>
-                <div class=" row">
+                <div class="row">
                     <div class="col-md-5">
                         <div class="articles-1">
                             <ul class="article-list">
@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <% end %>
-            </section>
+            </div>
             <aside class="aside-content col=md-3">
 
             </aside>
