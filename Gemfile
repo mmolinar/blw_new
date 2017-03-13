@@ -25,6 +25,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Paperclip gem to upload images
 gem "paperclip", "~> 5.0.0"
 
+#To add pagination to pages
+gem 'will_paginate', '~> 3.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
