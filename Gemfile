@@ -28,6 +28,9 @@ gem "paperclip", "~> 5.0.0"
 #To add pagination to pages
 gem 'will_paginate', '~> 3.1'
 
+#Url titles instead of numbers
+gem 'friendly_id', '~> 5.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
