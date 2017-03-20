@@ -31,6 +31,9 @@ gem 'will_paginate', '~> 3.1'
 #Url titles instead of numbers
 gem 'friendly_id', '~> 5.1'
 
+#Simple form gem
+gem 'simple_form', '~> 3.4'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :posts
   resources :articles
+  resources :recipes
   root 'static_pages#home'
   get 'static_pages/home'
   get 'static_pages/about'
