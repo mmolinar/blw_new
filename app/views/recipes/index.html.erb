@@ -1,1 +1,20 @@
-<h1>This is placeholder for recipes index</h1>
+<% @recipe.each_slice(3) do |recipes| %>
+  <div class="row">
+    <% recipes.each do |recipe| %>
+      <div class="col-sm-6 col-md-4">
+        <div class="recipe">
+          <div class="image_wrapper">
+            <%= link_to recipe do %>
+              <%= image_tag recipe.pic.url(:medium) %>
+            <% end %>
+            <h2>
+              <%= link_to recipe.title, recipe %>
+            </h2>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<%= link_to "Crear receta nueva", new_recipe_path%>

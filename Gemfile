@@ -34,6 +34,9 @@ gem 'friendly_id', '~> 5.1'
 #Simple form gem
 gem 'simple_form', '~> 3.4'
 
+#Nested forms
+gem 'cocoon', '~> 1.2', '>= 1.2.9'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

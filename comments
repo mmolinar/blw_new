@@ -1,5 +1,4 @@
 Add link to post model link:string (forgot to add when rails g
-link_to image; how to article.image or similar
 Make image fit into 16x9 in blog/index
 How to add the nav pills to the toggle button?
 How to make img-fluid resize to full width when screen smaller in Posts and Articles
@@ -9,6 +8,13 @@ Find out how to add ads and which ones
 Add store, sell products
 Do I need to resize (mogrify?) my Imagemagick images to make site faster?
 Nest my css
-Add pagination to post index and article index
-Only see New post and log out when in ADMIN mode
+Only see New post and log out when in ADMIN mode, edit recipes and delete
 Crear recetas controller/index
+*** heroku run rails c ... Post.find_each(&:save) and to Article for friendly_id to work when live
+How to add categories?
+How to add article sugestions for site depth
+[Simple Form] Simple Form is not configured in the application and will use the default values. Use `rails generate simple_form:install` to generate the Simple Form configuration.
+
+Recipe Mknz
+41:48 recipes.each_slice(3) no queda dentro del container (index)
+Style index show page with scss

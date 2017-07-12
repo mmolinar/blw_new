@@ -1,6 +1,13 @@
+<%= image_tag @recipe.pic.url(:medium, class: "recipe_image") %>
+
 <h1>
     <%= @recipe.title %>
 </h1>
 <p>
     <%= @recipe.description %>
 </p>
+
+<%= link_to "Atras", recipes_path, class: "btn btn-outline-primary" %>
+<br>
+<%= link_to "Edit", edit_recipe_path%>
+<%= link_to "Delete", recipe_path, method: :delete, data: {confirm: "Are you sure?"} %>
