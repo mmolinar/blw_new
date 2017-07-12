@@ -28,37 +28,60 @@
     }
 }
 
-/*#recipe_info, #ingredients, #directions {
-    background: white;
-    min-height: 360px;
-    border-radius: 5px;
-    padding: 2em 8%;
+#recipe_top {
+	margin-bottom: 50px;
+}
+
+#recipe_info, #ingredients, #directions {
+	background: white;
+	min-height: 360px;
+	border-radius: 5px;
+	padding: 2em 8%;
 }
 
 .recipe_image {
-    max-width: 100%;
-    border-radius: 5px;
+	max-width: 100%;
+	border-radius: 5px;
 }
 
 #recipe_info {
-    h1 {
-        font-size: 36px;
-        font-weight: normal;
-    }
-    .description {
-        color: #8A8A8A;
-        font-size: 1.1rem;
-    }
+	h1 {
+		font-size: 36px;
+		font-weight: normal;
+	}
+	.description {
+		color: #8A8A8A;
+		font-size: 20px;
+	}
 }
 
-#ingredients, #directions{
-    margin-bottom: 3.5rem;
-    ul, ol {
-        padding-left: 1.1rem;
-        li {
-            padding: 1em 0;
-            border-bottom: 1px solid #EAEAEA;
-        }
-    }
+#ingredients, #directions {
+	margin-bottom: 50px;
+	width: 100% !important;
+	ul, ol {
+		padding-left: 18px;
+		li {
+			padding: 1em 0;
+			border-bottom: 1px solid #EAEAEA;
+		}
+	}
 }
-*/
+.container{
+    background-color: #c3c3c3;
+}
+
+.form-inline {
+	margin-top: 15px;
+}
+.form-input {
+	/*width: 65% !important;*/
+	float: left;
+}
+.form-button {
+	float: left;
+	/*width: 30% !important;*/
+	margin-left: 5%;
+}
+.add-button {
+	margin-top: 25px;
+}
