@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170316113020) do
+ActiveRecord::Schema.define(version: 20180219192903) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(version: 20170316113020) do
     t.index ["slug"], name: "index_articles_on_slug", unique: true
   end
 
+  create_table "directions", force: :cascade do |t|
+    t.text     "step"
+    t.integer  "recipe_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_directions_on_recipe_id"
+  end
+
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
     t.integer  "sluggable_id",              null: false
@@ -38,9 +46,17 @@ ActiveRecord::Schema.define(version: 20170316113020) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
+  create_table "ingredients", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "recipe_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_ingredients_on_recipe_id"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string   "title"
-    t.text     "body"
+    t.string   "description"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.string   "pic_file_name"
@@ -49,6 +65,18 @@ ActiveRecord::Schema.define(version: 20170316113020) do
     t.datetime "pic_updated_at"
     t.string   "slug"
     t.index ["slug"], name: "index_posts_on_slug", unique: true
+  end
+
+  create_table "recipes", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "user_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "pic_file_name"
+    t.string   "pic_content_type"
+    t.integer  "pic_file_size"
+    t.datetime "pic_updated_at"
   end
 
 end
