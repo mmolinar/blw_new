@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-    before_action :find_article, only: [:edit, :show, :updat, :destroy]
+    before_action :find_article, only: [:edit, :show, :update, :destroy]
     
     def index
         @article = Article.all.order("created_at desc").paginate(page: params[:page], per_page: 7)
@@ -21,6 +21,24 @@ class ArticlesController < ApplicationController
     
     def show
         
+    end
+    
+    def edit
+    end
+    
+    def update
+        if @article.update(params[:article].permit(:title, :description))
+            redirect_to @article, notice: "Update success"
+        else
+            render 'edit'
+        end
+    end
+    
+    def destroy
+        @article = Articl.find(params[:id])
+        @article.destroy
+        
+        redirect_to posts_path
     end
     
     private

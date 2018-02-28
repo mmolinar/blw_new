@@ -34,7 +34,7 @@
                             <%= post.created_at.strftime("%d %B, %Y") %>
                         </p>
                         <p>
-                            <%= link_to post.body.truncate_words(35), post%>
+                            <%= link_to post.description.truncate_words(35), post%>
                         </p>
                     </div>
                 </div>

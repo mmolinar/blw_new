@@ -3,7 +3,7 @@ class Post < ApplicationRecord
     friendly_id :title, use: :slugged
     
     validates :title, presence: true, length: {minimum: 5}
-    validates :body, presence: true
+    validates :description, presence: true
     has_attached_file :pic, styles: { large: "851x351!", medium: "330x180!", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :pic, content_type: /\Aimage\/.*\z/
 end

@@ -1,34 +1,21 @@
 <% @article.each do |article| %>
-<div class="col-md-4">
-    <div class="articles-6-list">
-        <ul class="articles-6-list">
-            <li>
-                <!------------ 1ST ARTICLES-6 ------------>
-                <div class="articles-6-article">
-                    <div class="article-thumbnail">
-                        <!------- IMAGE ------->
-                        <a href="#"><%= image_tag article.pic.url(:medium), class: "img-thumbnail responsive" %></a>
-                    </div>
-                    <!------- END IMAGE ------->
-                    <div class="article-text">
-                        <!------- ARTICLE ------->
-                        <h3 class="category-title">
-                            <a href="#">1st article</a>
-                        </h3>
-                        <a class="column-article-title" href="#">
-                            <h3 class="article-title"><%= link_to article.title, article%></h3>
-                            <p class="article-author"><small>
-                            <%= article.created_at.strftime("%d %B, %Y") %></small>
-                            </p>
-                            <p>
-                                <%= link_to article.description.truncate_words(35), article%>
-                            </p>
-                        </a>
-                    </div>
-                    <!------- END ARTICLES-6 ------->
-                </div>
-            </li>
-        </ul>
+    <div class="col-md-4 articles-6-list">
+        <a href="#">
+            <%= image_tag article.pic.url, class: "posts-pic img-fluid responsive card-img-top" %>
+            <p class="date"><small class="text-muted">
+                <%= article.created_at.strftime("%d %B, %Y") %></small>
+            </p>
+            <h4 class="article-title">
+                <%= link_to article.title, article%>
+            </h4>
+            <p class"article-description">
+                <%= link_to article.description.truncate_words(35), article%>
+            </p>
+        </a>
+        <a>
+            <p class="category-title"><small class="text-muted">
+            <a href="#">1st articles</a>
+            </small></p>
+        </a>
     </div>
-</div>
 <% end %>

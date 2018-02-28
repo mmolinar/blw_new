@@ -1,3 +1,4 @@
+custom.css
 /* CUSTOMIZE THE HEADER
 -------------------------------------------------- */
 .header-wrapper {
@@ -15,7 +16,7 @@
 }
 
 .header-navigation .navbar-nav{
-    margin-left: 2rem;
+    margin-left:2rem;
 }
 
 /* CUSTOMIZE THE CAROUSEL
@@ -34,18 +35,27 @@
 
 /* Declare heights because of positioning of img element */
 .home-carousel .carousel-item {
-  height: 300px;
+  height: 450px;
   background-color: #777;
   width: 100%;
 }
 
-.home-carousel .carousel-inner > .item > img {
+/*.home-carousel .carousel-item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 300px;
-}
+  height: 700px;
+}*/
+
+/* CUSTOMIZE POSTS IN THE HOMEPAGE (3 pic in row)
+-------------------------------------------------- */
+#posts .posts-pic{
+    height: 280px;
+    width: 100%;
+    display: block;
+} 
+
 
 /* CUSTOMIZE THE 2 COLUMN ARTICLES ON HOMEPAGE
 -------------------------------------------------- */
@@ -58,38 +68,33 @@
     width: 100%;
 }
 
-.article-list{
-        list-style: none;
-        padding-left: 0;
-    }
-
 @media (min-width: 992px) {
 .article-list{
         border-right: 1px solid #e0e0e0;
     }
 }
 
-.article-list li{
-    margin-bottom: 1rem;
-    margin-right: 0;
-}
-
 .article-text{
     padding: 1rem;
 }
 
-.article-text .category-title a{
-    font-size: 0.82rem;
-    color: #7cc347;
-    text-transform: uppercase;
-    margin-bottom: 1px;
-    text-decoration: none;
-    font-weight: bold;
+.category-title{
+    margin-top: -1rem;    
 }
 
-.article-text .column-article-title h3{
-    line-height: 1;
-    font-weight: 700;
+.category-title a{
+    font-size: 0.7rem;
+    /*color: #7cc347;*/
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.category-title a:hover{
+    text-decoration: none;
+}
+
+.articles-6-list a:hover{
+    text-decoration: none;
 }
 
 .title-where {
@@ -98,6 +103,21 @@
 
 .videos{
     padding: 0.5rem;
+}
+
+.article-thumbnail {
+    margin-bottom: 1rem;
+}
+
+.articles-6-list .posts-pic{
+    height: 150px;
+    width: 100%;
+    display: block;
+    margin-top: 1rem;
+}
+
+.articles-6-list .article-title{
+    margin-top: -0.5rem;
 }
 
 /* CUSTOMIZE RECIPE HOME
@@ -166,7 +186,7 @@
     }
 }
 
-/* CUSTOMIZE INDEX
+/* CUSTOMIZE INDEX 
 -------------------------------------------------- */
 .index-header {
     margin-top: 2.5rem;
@@ -205,3 +225,9 @@
     
     .apple_pagination a:hover, .apple_pagination a:focus {
       text-decoration: underline; }
+      
+/* CUSTOMIZE INDEX 
+-------------------------------------------------- */
+.article-list .img-thumbnail{
+    height: 250px;
+}
